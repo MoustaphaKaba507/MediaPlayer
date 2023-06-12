@@ -9,12 +9,14 @@ public class AudioPlayer implements MediaPlayer{
     public void play(String audioType, String filename) {
       if(audioType.equalsIgnoreCase("mp3")){
         System.out.println("Playing mp3 file. Name: "+filename);
-      }else if(audioType.equalsIgnoreCase("Vlc") || audioType.equalsIgnoreCase("mp4")){
+      }else (audioType.equalsIgnoreCase("Vlc") || audioType.equalsIgnoreCase("mp4")){
         mediaAdapter = new MediaAdapter(audioType);
         mediaAdapter.play(audioType,filename);
-      }else {
-        System.out.println("no mdeia. "+audioType+"not good");
       }
+      //deze code is niet nodig.
+     // else {
+     //   System.out.println("no mdeia. "+audioType+"not good");
+      //}
 
     }
 }
