@@ -17,9 +17,10 @@ public class MediaAdapter implements MediaPlayer{
 
 
     //Method
-    public void MediaAdapter(String audio){
+    //deze method hebben wij niet nodig
+   // public void MediaAdapter(String audio){
 
-    }
+   // }
 
 
     @Override
@@ -28,6 +29,10 @@ public class MediaAdapter implements MediaPlayer{
             advanceMusicPlayer.playVlc(filename);
         }else if(audioType.equalsIgnoreCase("mp4")){
             advanceMusicPlayer.playMp4(filename);
+        }
+        //Ik heb deze code toegevoegd om de invalid media te controleren
+        else {
+            System.out.println("Invalid media. " + audioType + " format not supported");
         }
 
     }
